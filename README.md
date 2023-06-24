@@ -7,7 +7,7 @@ The "Website Analysis API" is a Node.js project that utilizes advanced pattern r
 ## Installation
 
 ```bash
-npm install duckystudios/website-analysis-api
+npm install website-analysis-api
 ```
 
 ## Usage
