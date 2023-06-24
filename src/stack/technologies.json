@@ -1,0 +1,221 @@
+{
+    "algolia": {
+        "name": "Algolia",
+        "group": 5,
+        "category": 29,
+        "description": "Algolia is a hosted search engine capable of delivering realtime results from the first keystroke.",
+        "keywords": [
+            "algolia",
+            "search"
+        ],
+        "website": "https://www.algolia.com/",
+        "hints": {
+            "regex": [
+                "href=\"https:\/\/([A-Z0-9]+)-dsn.algolia.net\""
+            ]
+        },
+        "saas": true,
+        "paid": true
+    },
+    "amazon-web-services": {
+        "name": "Amazon Web Services",
+        "group": 7,
+        "category": 88,
+        "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services.",
+        "keywords": [
+            "amazon",
+            "aws"
+        ],
+        "website": "https://aws.amazon.com/",
+        "hints": {
+            "regex": [
+                "awsstatic\\.com"
+            ]
+        },
+        "saas": true,
+        "paid": true
+    },
+    "cloudflare": {
+        "name": "Cloudflare",
+        "group": 11,
+        "category": 16,
+        "description": "Cloudflare is a service that offers CDN and DNS hosting.",
+        "keywords": [
+            "cloudflare"
+        ],
+        "website": "https://www.cloudflare.com/",
+        "hints": {
+            "dns": {
+                "SOA": ".ns.cloudflare.com"
+            }
+        },
+        "saas": true,
+        "paid": true
+    },
+    "google-analytics": {
+        "name": "Google Analytics",
+        "group": 2,
+        "category": 54,
+        "description": "Google Analytics is a free service offered by Google that generates detailed statistics about the visitors to a website.",
+        "keywords": [
+            "google",
+            "analytics"
+        ],
+        "website": "http://www.google.com/analytics/",
+        "hints": {
+            "regex": [
+                "<link rel=\"dns-prefetch\" href=\"https://www.google-analytics.com/\">",
+                "<script async src=\"https://www.google-analytics.com/analytics.js\">",
+                "gaCookiesAsAnalytical"
+            ]
+        },
+        "saas": true,
+        "paid": false
+    },
+    "jQuery": {
+        "name": "jQuery",
+        "group": 9,
+        "category": 12,
+        "description": "jQuery is a fast, small, and feature-rich JavaScript library.",
+        "keywords": [
+            "jquery"
+        ],
+        "website": "http://jquery.com/",
+        "github": "https://github.com/jquery/jquery",
+        "hints": {
+            "regex": [
+                "jquery-\\d+\\.\\d+\\.\\d+(?:\\.min)?\\.js"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "next.js": {
+        "name": "Next.js",
+        "group": 9,
+        "category": 12,
+        "description": "Next.js is a minimalistic framework for server-rendered React applications.",
+        "keywords": [
+            "next",
+            "nextjs"
+        ],
+        "website": "https://nextjs.org/",
+        "github": "https://github.com/vercel/next.js",
+        "hints": {
+            "regex": [
+                "next(\\.min)?\\.js",
+                "data-reactroot",
+                "_next/static/"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "reactjs": {
+        "name": "React",
+        "group": 9,
+        "category": 12,
+        "description": "React is a JavaScript library for building user interfaces.",
+        "keywords": [
+            "react",
+            "reactjs"
+        ],
+        "website": "https://react.dev/",
+        "github": "https://facebook.github.io/react/",
+        "hints": {
+            "regex": [
+                "react(\\.min)?\\.js",
+                "data-reactroot",
+                "_next/static/"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "twitter-seo": {
+        "name": "Twitter SEO",
+        "group": 2,
+        "category": 54,
+        "description": "Twitter SEO helps you optimize your Website for Twitter.",
+        "keywords": [
+            "twitter",
+            "seo"
+        ],
+        "website": "http://twitter.com/",
+        "hints": {
+            "regex": [
+                "twitter:card",
+                "twitter:site",
+                "twitter:creator",
+                "twitter:title",
+                "twitter:description",
+                "twitter:image"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "tailwindcss": {
+        "name": "Tailwind CSS",
+        "group": 9,
+        "category": 66,
+        "description": "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.",
+        "keywords": [
+            "tailwind",
+            "tailwindcss"
+        ],
+        "website": "https://tailwindcss.com/",
+        "github": "https://github.com/tailwindlabs/tailwindcss",
+        "hints": {
+            "regex": [
+                "tailwind\\.min\\.css",
+                "--tw-",
+                "cdn.tailwindcss.com",
+                "h-full",
+                "w-full"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "vercel": {
+        "name": "Vercel",
+        "group": 5,
+        "category": 29,
+        "description": "Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow.",
+        "keywords": [
+            "vercel"
+        ],
+        "website": "https://vercel.com/",
+        "github": "https://github.com/vercel/vercel",
+        "hints": {
+            "dns": {
+                "SOA": ".vercel-dns.com"
+            }
+        },
+        "saas": true,
+        "paid": true
+    },
+    "vue.js": {
+        "name": "vue.js",
+        "group": 9,
+        "category": 12,
+        "description": "Vue.js is a library for building interactive web interfaces. It provides data-reactive components with a simple and flexible API.",
+        "keywords": [
+            "vue",
+            "vuejs"
+        ],
+        "website": "https://vuejs.org/",
+        "github": "https://github.com/vuejs/core",
+        "hints": {
+            "regex": [
+                "/<([a-z]+)\\s+v-data=\"([^\"]*)\"\\s*>[^<]*<\/\\1>/gm",
+                "vue(\\.min)?\\.js",
+                "data-v-[a-zA-Z0-9]+",
+                "data-vue2"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    }
+}
