@@ -42,7 +42,7 @@ class WebsiteAnalyzer {
         });
     }
 
-    public async analyze(): Promise<void> {
+    public async analyze(): Promise<Technology[]> {
         if (!this.hasAllRequiredFiles()) throw new Error('Missing required files (' + Object.keys(requiredFiles).join(', ') + ')');
         if (!this.hasAllRequiredOptions()) throw new Error('Missing required options (' + requiredOptions.join(', ') + ')');
 
@@ -66,7 +66,7 @@ class WebsiteAnalyzer {
             if (dnsResult) result.push(dnsResult);
         }
         
-        console.log(result);
+        return result;
     }
 
     private analyzeRegex(content: string, tech: any): Technology {
