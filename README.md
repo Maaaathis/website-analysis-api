@@ -71,10 +71,33 @@ This is how a answer might look like:
 ]
 ```
 
+## Currently supported technologies
+- Algolia
+- Amazon Web Services
+- cdnjs
+- Cloudflare
+- Google Analytics
+- MediaElement.js
+- PHP
+- jQuery
+- next.js
+- React
+- Twitter SEO
+- TailwindCSS
+- Vercel
+- VueJs
+- Webpack
+- Wordpress
+
+# Methods used for scanning
+
+|Method|Description|
+|--|--|
+|`dns`|Checking inside the dns records if something matches the regex of an product (e.g. Vercel or Cloudflare)|
+|`regex`|Checking the website content to the given regex expression|
+|`header` (PLANNED)|Checking the resonse headers to search for product|
+|`cookie` (PLANNED)|Checking the given cookies to search for the product|
+
 ## Issues
 
 If you have issues with the files in the stack folder, you can simply download them and define the path yourself with the `technologiesFile`, `groupsFile` and `categoriesFile` path. You can also just use it to use custom files.
-
-## Todo
-
-- [ ] Cookie Hint Analyzer
