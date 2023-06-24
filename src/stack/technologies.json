@@ -35,6 +35,26 @@
         "saas": true,
         "paid": true
     },
+    "buysellads": {
+        "name": "BuySellAds",
+        "group": 2,
+        "category": 36,
+        "description": "BuySellAds is an online advertising network.",
+        "keywords": [
+            "buysellads",
+            "ads"
+        ],
+        "website": "https://www.buysellads.com/",
+        "hints": {
+            "regex": [
+                "buysellads\\.com\\/served\\.bsa\\.cmd\\.push\\(",
+                "buysellads\\.com\\/s\\/show\\.js",
+                "servedby-buysellads\\.com"
+            ]
+        },
+        "saas": true,
+        "paid": true
+    },
     "cdnjs": {
         "name": "cdnjs",
         "group": 5,
@@ -70,6 +90,29 @@
         "saas": true,
         "paid": true
     },
+    "fontawesome": {
+        "name": "Font Awesome",
+        "group": 9,
+        "category": 17,
+        "description": "Font Awesome is a font and icon toolkit based on CSS and LESS.",
+        "keywords": [
+            "fontawesome",
+            "font",
+            "icon"
+        ],
+        "website": "http://fontawesome.com/",
+        "hints": {
+            "regex": [
+                "font-awesome\\.css",
+                "fontawesome\\.css",
+                "fontawesome-webfont",
+                "fa-",
+                "use.fortawesome.com"
+            ]
+        },
+        "saas": false,
+        "paid": true
+    },
     "google-analytics": {
         "name": "Google Analytics",
         "group": 2,
@@ -88,6 +131,71 @@
             ]
         },
         "saas": true,
+        "paid": false
+    },
+    "google-tagmanager": {
+        "name": "Google Tag Manager",
+        "group": 2,
+        "category": 54,
+        "description": "Google Analytics is a free service offered by Google that generates detailed statistics about the visitors to a website.",
+        "keywords": [
+            "google",
+            "analytics"
+        ],
+        "website": "http://www.google.com/analytics/",
+        "hints": {
+            "regex": [
+                "<link rel=\"dns-prefetch\" href=\"https://www.google-analytics.com/\">",
+                "<script async src=\"https://www.google-analytics.com/analytics.js\">",
+                "gaCookiesAsAnalytical",
+                "googletagmanager\\.com/gtm\\.js",
+                "gtag"
+            ]
+        },
+        "saas": true,
+        "paid": false
+    },
+    "lazysizes": {
+        "name": "LazySizes",
+        "group": 9,
+        "category": 14,
+        "description": "lazysizes is a fast lazyloader for images (responsive and normal), iframes and scripts/widgets without any dependency.",
+        "keywords": [
+            "lazysizes",
+            "lazyload",
+            "lazyloader"
+        ],
+        "website": "https://afarkas.github.io/lazysizes/index.html",
+        "hints": {
+            "regex": [
+                "lazysizes\\.js",
+                "lazyload",
+                "lazyloader"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "matomo": {
+        "name": "Matomo",
+        "group": 2,
+        "category": 54,
+        "description": "Matomo is a free and open source web analytics application.",
+        "keywords": [
+            "matomo",
+            "analytics"
+        ],
+        "website": "https://matomo.org/",
+        "hints": {
+            "regex": [
+                "matomo\\.js",
+                "piwik\\.js",
+                "piwik\\.php",
+                "MatomoConfig",
+                "matomoHost"
+            ]
+        },
+        "saas": false,
         "paid": false
     },
     "mediaelement": {
@@ -110,6 +218,30 @@
                 "mediaelementplayer-legacy",
                 "mediaelement",
                 "mejs.video-player"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "opengraph": {
+        "name": "Open Graph",
+        "group": 2,
+        "category": 54,
+        "description": "Open Graph protocol allows web pages to become rich objects in a social graph.",
+        "keywords": [
+            "opengraph"
+        ],
+        "website": "http://ogp.me/",
+        "hints": {
+            "regex": [
+                "<meta property=\"og:",
+                "<meta content=\"og:",
+                "<meta name=\"og:",
+                "<meta id=\"og:",
+                "<meta property=\"og-",
+                "<meta content=\"og-",
+                "<meta name=\"og-",
+                "<meta id=\"og-"
             ]
         },
         "saas": false,
@@ -197,6 +329,44 @@
         "saas": false,
         "paid": false
     },
+    "rss": {
+        "name": "RSS",
+        "group": 6,
+        "category": 19,
+        "description": "RSS is a type of web feed which allows users to access updates to online content.",
+        "keywords": [
+            "rss"
+        ],
+        "website": "https://en.wikipedia.org/wiki/RSS",
+        "hints": {
+            "regex": [
+                "application/rss+xml",
+                "rss+xml",
+                "rss",
+                "<link rel=\"alternate\" type=\"application/rss+xml\""
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "stripe": {
+        "name": "Stripe",
+        "group": 1,
+        "category": 41,
+        "description": "Stripe is a suite of APIs that powers commerce for businesses of all sizes.",
+        "keywords": [
+            "stripe"
+        ],
+        "website": "https://stripe.com/",
+        "hints": {
+            "regex": [
+                "js.stripe.com/v\\d+",
+                "m.stripe.network/inner.html"
+            ]
+        },
+        "saas": true,
+        "paid": true
+    },
     "twitter": {
         "name": "Twitter SEO",
         "group": 2,
@@ -277,7 +447,8 @@
                 "/<([a-z]+)\\s+v-data=\"([^\"]*)\"\\s*>[^<]*<\/\\1>/gm",
                 "vue(\\.min)?\\.js",
                 "data-v-[a-zA-Z0-9]+",
-                "data-vue2"
+                "data-vue2",
+                "vue-container"
             ]
         },
         "saas": false,
