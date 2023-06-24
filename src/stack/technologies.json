@@ -36,7 +36,7 @@
         "paid": true
     },
     "cdnjs": {
-        "name": "CDNJS",
+        "name": "cdnjs",
         "group": 5,
         "category": 31,
         "description": "CDNJS is a free and open-source CDN service trusted by over 10% of websites, powered by Cloudflare.",
@@ -90,6 +90,51 @@
         "saas": true,
         "paid": false
     },
+    "mediaelement": {
+        "name": "MediaElement.js",
+        "group": 9,
+        "category": 14,
+        "description": "MediaElement.js is a HTML5 video and audio player with Flash fallback.",
+        "keywords": [
+            "mediaelement",
+            "video",
+            "audio",
+            "player"
+        ],
+        "website": "http://mediaelementjs.com/",
+        "github": "https://github.com/mediaelement/mediaelement-plugins",
+        "hints": {
+            "regex": [
+                "mediaelement-and-player(\\.min)?\\.js",
+                "mejs-mediaelement",
+                "mediaelementplayer-legacy",
+                "mediaelement",
+                "mejs.video-player"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "php": {
+        "name": "PHP",
+        "group": 1,
+        "category": 27,
+        "description": "PHP is a server-side scripting language designed for web development.",
+        "keywords": [
+            "php"
+        ],
+        "website": "http://php.net/",
+        "hints": {
+            "regex": [
+                "<link rel=\"dns-prefetch\" href=\"https://secure.php.net/\">",
+                "<link rel=\"dns-prefetch\" href=\"https://www.php.net/\">",
+                "<link rel=\"dns-prefetch\" href=\"https://php.net/\">",
+                ".php\""
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
     "jQuery": {
         "name": "jQuery",
         "group": 9,
@@ -141,7 +186,7 @@
             "reactjs"
         ],
         "website": "https://react.dev/",
-        "github": "https://facebook.github.io/react/",
+        "github": "https://github.com/facebook/react",
         "hints": {
             "regex": [
                 "react(\\.min)?\\.js",
@@ -161,7 +206,7 @@
             "twitter",
             "seo"
         ],
-        "website": "http://twitter.com/",
+        "website": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started",
         "hints": {
             "regex": [
                 "twitter:card",
@@ -233,6 +278,27 @@
                 "vue(\\.min)?\\.js",
                 "data-v-[a-zA-Z0-9]+",
                 "data-vue2"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "webpack": {
+        "name": "Webpack",
+        "group": 9,
+        "category": 19,
+        "description": "webpack is a module bundler for modern JavaScript applications.",
+        "keywords": [
+            "webpack"
+        ],
+        "website": "https://webpack.js.org/",
+        "github": "https://github.com/webpack/webpack",
+        "hints": {
+            "regex": [
+                "webpack(\\.min)?\\.js",
+                "webpackJsonp",
+                "webpackBootstrap",
+                "data-webpack"
             ]
         },
         "saas": false,
