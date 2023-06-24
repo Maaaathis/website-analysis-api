@@ -155,7 +155,7 @@
         "saas": false,
         "paid": false
     },
-    "next.js": {
+    "nextjs": {
         "name": "Next.js",
         "group": 9,
         "category": 12,
@@ -176,7 +176,7 @@
         "saas": false,
         "paid": false
     },
-    "reactjs": {
+    "react": {
         "name": "React",
         "group": 9,
         "category": 12,
@@ -197,7 +197,7 @@
         "saas": false,
         "paid": false
     },
-    "twitter-seo": {
+    "twitter": {
         "name": "Twitter SEO",
         "group": 2,
         "category": 54,
@@ -245,8 +245,8 @@
     },
     "vercel": {
         "name": "Vercel",
-        "group": 5,
-        "category": 29,
+        "group": 7,
+        "category": 88,
         "description": "Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow.",
         "keywords": [
             "vercel"
@@ -261,7 +261,7 @@
         "saas": true,
         "paid": true
     },
-    "vue.js": {
+    "vue": {
         "name": "vue.js",
         "group": 9,
         "category": 12,
