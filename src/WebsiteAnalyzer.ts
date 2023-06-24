@@ -28,6 +28,18 @@ class WebsiteAnalyzer {
 
     constructor(options: any) {
         this.options = options || {};
+
+        if (this.options.technologiesFile !== null) {
+            requiredFiles.technologies = this.options.technologiesFile;
+        }
+
+        if (this.options.groupsFile !== null) {
+            requiredFiles.groups = this.options.groupsFile;
+        }
+
+        if (this.options.categoriesFile !== null) {
+            requiredFiles.categories = this.options.categoriesFile;
+        }
     }
 
     private hasAllRequiredFiles(): boolean {
