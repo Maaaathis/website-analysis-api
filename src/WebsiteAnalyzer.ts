@@ -29,15 +29,15 @@ class WebsiteAnalyzer {
     constructor(options: any) {
         this.options = options || {};
 
-        if (this.options.technologiesFile !== null) {
+        if (this.options.hasOwnProperty('technologiesFile')) {
             requiredFiles.technologies = this.options.technologiesFile;
         }
 
-        if (this.options.groupsFile !== null) {
+        if (this.options.hasOwnProperty('groupsFile')) {
             requiredFiles.groups = this.options.groupsFile;
         }
 
-        if (this.options.categoriesFile !== null) {
+        if (this.options.hasOwnProperty('categoriesFile')) {
             requiredFiles.categories = this.options.categoriesFile;
         }
     }

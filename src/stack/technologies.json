@@ -35,6 +35,24 @@
         "saas": true,
         "paid": true
     },
+    "cdnjs": {
+        "name": "CDNJS",
+        "group": 5,
+        "category": 31,
+        "description": "CDNJS is a free and open-source CDN service trusted by over 10% of websites, powered by Cloudflare.",
+        "keywords": [
+            "cdnjs",
+            "cdn"
+        ],
+        "website": "https://cdnjs.com/",
+        "hints": {
+            "regex": [
+                "cdnjs\\.cloudflare\\.com"
+            ]
+        },
+        "saas": true,
+        "paid": false
+    },
     "cloudflare": {
         "name": "Cloudflare",
         "group": 11,
@@ -84,7 +102,9 @@
         "github": "https://github.com/jquery/jquery",
         "hints": {
             "regex": [
-                "jquery-\\d+\\.\\d+\\.\\d+(?:\\.min)?\\.js"
+                "jquery-\\d+\\.\\d+\\.\\d+(?:\\.min)?\\.js",
+                "jquery-mobile-js",
+                "factory(jQuery);"
             ]
         },
         "saas": false,
@@ -213,6 +233,27 @@
                 "vue(\\.min)?\\.js",
                 "data-v-[a-zA-Z0-9]+",
                 "data-vue2"
+            ]
+        },
+        "saas": false,
+        "paid": false
+    },
+    "wordpress": {
+        "name": "WordPress",
+        "group": 5,
+        "category": 45,
+        "description": "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.",
+        "keywords": [
+            "wordpress"
+        ],
+        "website": "https://wordpress.org/",
+        "hints": {
+            "regex": [
+                "wp-content",
+                "wp-includes",
+                "wp-embed",
+                "wp-json",
+                "wp-emoji-release"
             ]
         },
         "saas": false,
