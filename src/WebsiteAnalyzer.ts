@@ -1,4 +1,3 @@
-import fs from 'fs';
 import axios from 'axios';
 
 export type Technology = {
@@ -29,23 +28,17 @@ class WebsiteAnalyzer {
     constructor(options: any) {
         this.options = options || {};
 
-        if (this.options.hasOwnProperty('technologiesFile')) {
-            requiredFiles.technologies = this.options.technologiesFile;
+        if (this.options.hasOwnProperty('technologies')) {
+            requiredFiles.technologies = this.options.technologies;
         }
 
-        if (this.options.hasOwnProperty('groupsFile')) {
-            requiredFiles.groups = this.options.groupsFile;
+        if (this.options.hasOwnProperty('groups')) {
+            requiredFiles.groups = this.options.groups;
         }
 
-        if (this.options.hasOwnProperty('categoriesFile')) {
-            requiredFiles.categories = this.options.categoriesFile;
+        if (this.options.hasOwnProperty('categories')) {
+            requiredFiles.categories = this.options.categories;
         }
-    }
-
-    private hasAllRequiredFiles(): boolean {
-        return Object.keys(requiredFiles).every((key) => {
-            return fs.existsSync(requiredFiles[key]);
-        });
     }
 
     private hasAllRequiredOptions(): boolean {
@@ -55,12 +48,11 @@ class WebsiteAnalyzer {
     }
 
     public async analyze(): Promise<Technology[]> {
-        if (!this.hasAllRequiredFiles()) throw new Error('Missing required files (' + Object.keys(requiredFiles).join(', ') + ')');
         if (!this.hasAllRequiredOptions()) throw new Error('Missing required options (' + requiredOptions.join(', ') + ')');
 
-        const groups = JSON.parse(fs.readFileSync(requiredFiles.groups, 'utf8'));
-        const categories = JSON.parse(fs.readFileSync(requiredFiles.categories, 'utf8'));
-        const technologies = JSON.parse(fs.readFileSync(requiredFiles.technologies, 'utf8'));
+        const groups = this.options.groups;
+        const categories = this.options.categories;
+        const technologies = this.options.technologies;
 
         const url = this.options.url;
 
@@ -156,11 +148,11 @@ class WebsiteAnalyzer {
     }
 
     private getGroupNameById(id: number): string {
-        return JSON.parse(fs.readFileSync(requiredFiles.groups, 'utf8'))[id].name || null;
+        return this.options.groups[id].name || null;
     }
 
     private getCategoryNameById(id: number): string {
-        return JSON.parse(fs.readFileSync(requiredFiles.categories, 'utf8'))[id].name || null;
+        return this.options.categories[id].name || null;
     }
 
     private async getWebsiteContent(url: string): Promise<string> {
