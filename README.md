@@ -7,3 +7,15 @@ The "Website Analysis API" is a Node.js project that utilizes advanced pattern r
 ```bash
 npm install duckystudios/website-analysis-api
 ```
+
+## Usage
+
+```js
+import WebsiteAnalyzer from './WebsiteAnalyzer';
+
+const analyzer = new WebsiteAnalyzer({
+    url: 'https://example.com'
+});
+
+analyzer.analyze();
+```
